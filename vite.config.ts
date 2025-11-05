@@ -32,6 +32,13 @@ export default defineConfig({
     ],
   },
   logLevel: 'info',
+
+  // Allow top-level await by targeting modern JS
+  build: {
+    target: 'esnext',
+    // optional: set outDir if you want (e.g. outDir: 'build')
+  },
+
   plugins: [
     nextPublicProcessEnv(),
     restartEnvFileChange(),
@@ -40,7 +47,7 @@ export default defineConfig({
       runtime: 'node',
     }),
     babel({
-      include: ['src/**/*.{js,jsx,ts,tsx}'], // or RegExp: /src\/.*\.[tj]sx?$/
+      include: ['src/**/*.{js,jsx,ts,tsx}'], // or RegExp: /src\/.*\.[tj]sx?$/ 
       exclude: /node_modules/, // skip everything else
       babelConfig: {
         babelrc: false, // don’t merge other Babel files
