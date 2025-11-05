@@ -2,11 +2,16 @@
   "name": "web",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "react-router dev",
     "build": "react-router build",
     "vercel-build": "react-router build",
     "start": "react-router start",
+    "preview": "react-router preview",
+    "clean": "rimraf .output .cache dist build",
     "typecheck": "react-router typegen && tsc --noEmit"
   },
   "dependencies": {
