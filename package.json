@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "web",
   "private": true,
   "type": "module",
@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "react-router dev",
-	"prebuild": "node ./scripts/ensure-build-api-folder.js",
+	"prebuild":"node ./scripts/ensure-build-api-folder.cjs",
     "build": "react-router build",
     "vercel-build": "react-router build",
     "start": "react-router start",
@@ -104,3 +104,4 @@
     "next-themes": "^0.3.0"
   }
 }
+
